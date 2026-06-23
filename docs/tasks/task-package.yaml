@@ -1,0 +1,128 @@
+planningWave: photo-album-organizer
+tasksDir: docs/tasks
+milestones:
+  - "Phase 1: Setup"
+  - "Phase 2: Foundational"
+  - "Phase 3: US1 Browse & View Photos"
+  - "Phase 4: US2 Create Albums & Add Photos"
+  - "Phase 5: US3 Reorganize by Drag & Drop"
+  - "Phase 6: Polish & Cross-Cutting"
+tasks:
+  - id: T001
+    file: docs/tasks/T001-initialize-next-js-app-router-typescript-strict-project.md
+  - id: T002
+    file: docs/tasks/T002-add-and-pin-runtime-dependencies.md
+  - id: T003
+    file: docs/tasks/T003-configure-eslint-eslint-plugin-jsx-a11y-and-prettier.md
+  - id: T004
+    file: docs/tasks/T004-configure-vitest-react-testing-library-jest-axe-fake-indexed.md
+  - id: T005
+    file: docs/tasks/T005-define-domain-types-album-photo-photoblob-addoutcome-addresu.md
+  - id: T006
+    file: docs/tasks/T006-implement-indexeddb-open-upgrade-with-object-stores-albums-p.md
+  - id: T007
+    file: docs/tasks/T007-unit-test-indexeddb-schema-stores-indexes-and-albumid-conten.md
+  - id: T008
+    file: docs/tasks/T008-create-repository-scaffolding-typed-db-handle-accessor-valid.md
+  - id: T009
+    file: docs/tasks/T009-implement-shared-dialog-primitive-focus-trap-esc-close-role-.md
+  - id: T010
+    file: docs/tasks/T010-unit-test-dialog-focus-trap-esc-close-focus-restore-jest-axe.md
+  - id: T011
+    file: docs/tasks/T011-implement-visuallyhidden.md
+  - id: T012
+    file: docs/tasks/T012-implement-emptystate-heading-helper-text-optional-action.md
+  - id: T013
+    file: docs/tasks/T013-implement-root-layout-html-lang-skip-link-global-styles.md
+  - id: T014
+    file: docs/tasks/T014-implement-read-methods-listalbums-by-position-listphotos-by-.md
+  - id: T015
+    file: docs/tasks/T015-unit-test-repository-reads-album-photo-ordering-thumbnail-fu.md
+  - id: T016
+    file: docs/tasks/T016-implement-albumcard-title-derived-date-label-no-date-yet-foc.md
+  - id: T017
+    file: docs/tasks/T017-unit-test-albumcard-renders-title-date-placeholder-keyboard-.md
+  - id: T018
+    file: docs/tasks/T018-implement-albumlist-renders-ordered-albumcards-no-albums-emp.md
+  - id: T019
+    file: docs/tasks/T019-unit-test-albumlist-ordered-render-empty-state.md
+  - id: T020
+    file: docs/tasks/T020-implement-main-page-load-listalbums-render-albumlist-navigat.md
+  - id: T021
+    file: docs/tasks/T021-implement-phototile-thumbnail-img-with-intrinsic-width-heigh.md
+  - id: T022
+    file: docs/tasks/T022-unit-test-phototile-renders-thumbnail-accessible-name-activa.md
+  - id: T023
+    file: docs/tasks/T023-implement-photogrid-virtualized-via-tanstack-react-virtual-c.md
+  - id: T024
+    file: docs/tasks/T024-unit-test-photogrid-renders-only-visible-subset-revokes-urls.md
+  - id: T025
+    file: docs/tasks/T025-implement-photolightbox-modal-on-dialog-full-image-esc-close.md
+  - id: T026
+    file: docs/tasks/T026-unit-test-photolightbox-open-close-focus-restore-jest-axe.md
+  - id: T027
+    file: docs/tasks/T027-implement-album-detail-page-load-listphotos-render-photogrid.md
+  - id: T028
+    file: docs/tasks/T028-implement-supported-format-mime-guard.md
+  - id: T029
+    file: docs/tasks/T029-unit-test-validate-accepts-jpeg-png-gif-webp-rejects-others.md
+  - id: T030
+    file: docs/tasks/T030-implement-sha-256-content-hash-web-crypto-subtle-digest.md
+  - id: T031
+    file: docs/tasks/T031-unit-test-hash-stable-hash-identical-bytes-identical-hash-re.md
+  - id: T032
+    file: docs/tasks/T032-implement-exif-capture-date-extraction-with-added-date-fallb.md
+  - id: T033
+    file: docs/tasks/T033-unit-test-exif-reads-datetimeoriginal-falls-back-when-absent.md
+  - id: T034
+    file: docs/tasks/T034-implement-canvas-thumbnail-generation-256px-longest-edge-int.md
+  - id: T035
+    file: docs/tasks/T035-unit-test-thumbnail-downscales-reports-dimensions-surfaces-d.md
+  - id: T036
+    file: docs/tasks/T036-implement-createalbum-trim-validate-title-append-position.md
+  - id: T037
+    file: docs/tasks/T037-implement-addphotos-pipeline-validate-hash-per-album-dedup-e.md
+  - id: T038
+    file: docs/tasks/T038-implement-removephoto-delete-photo-blob-recompute-date-count.md
+  - id: T039
+    file: docs/tasks/T039-unit-test-repository-writes-create-addphotos-added-rejected-.md
+  - id: T040
+    file: docs/tasks/T040-implement-createalbumdialog-title-input-blocks-empty-title-o.md
+  - id: T041
+    file: docs/tasks/T041-unit-test-createalbumdialog-submit-empty-title-block-jest-ax.md
+  - id: T042
+    file: docs/tasks/T042-implement-addphotoscontrol-multi-file-input-per-file-outcome.md
+  - id: T043
+    file: docs/tasks/T043-unit-test-addphotoscontrol-added-rejected-duplicate-feedback.md
+  - id: T044
+    file: docs/tasks/T044-implement-deletealbumdialog-confirmation-on-dialog.md
+  - id: T045
+    file: docs/tasks/T045-unit-test-deletealbumdialog-confirm-cancel-jest-axe.md
+  - id: T046
+    file: docs/tasks/T046-wire-create-delete-album.md
+  - id: T047
+    file: docs/tasks/T047-wire-add-remove-photos-and-date-label-refresh.md
+  - id: T048
+    file: docs/tasks/T048-implement-album-position-order-helpers-reorder-gap-handling.md
+  - id: T049
+    file: docs/tasks/T049-unit-test-ordering-helpers.md
+  - id: T050
+    file: docs/tasks/T050-implement-reorderalbums-atomically-reassign-positions-valida.md
+  - id: T051
+    file: docs/tasks/T051-unit-test-reorderalbums-new-order-persisted-atomic-validatio.md
+  - id: T052
+    file: docs/tasks/T052-integrate-dnd-kit-sortablecontext-pointer-keyboard-sensors-d.md
+  - id: T053
+    file: docs/tasks/T053-extend-albumlist-albumcard-unit-tests-for-pointer-reorder-ke.md
+  - id: T054
+    file: docs/tasks/T054-wire-reorder-persistence-call-reorderalbums-on-drop-placemen.md
+  - id: T055
+    file: docs/tasks/T055-add-ci-workflow-running-typecheck-lint-test-as-merge-gates.md
+  - id: T056
+    file: docs/tasks/T056-add-a-large-album-fixture-dev-seed-and-verify-sc-005-first-s.md
+  - id: T057
+    file: docs/tasks/T057-accessibility-audit-axe-across-main-page-default-mid-drag-an.md
+  - id: T058
+    file: docs/tasks/T058-write-project-readme-md-with-setup-run-and-test-instructions.md
+  - id: T059
+    file: docs/tasks/T059-run-full-quickstart-md-validation-scenarios-a-d-and-check-of.md

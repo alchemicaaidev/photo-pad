@@ -1,0 +1,318 @@
+planningWave: photo-album-organizer
+linearProject: 36e4d71a2d48
+publishedAt: '2026-06-23T02:39:09.857752+00:00'
+milestones:
+  'Phase 1: Setup':
+    milestoneId: 2a138b1e-27fd-44f5-afd1-c5641d5b3cc4
+    name: 'Phase 1: Setup'
+  'Phase 2: Foundational':
+    milestoneId: c4864db8-4be2-4ac7-a63f-b296ac29611b
+    name: 'Phase 2: Foundational'
+  'Phase 3: US1 Browse & View Photos':
+    milestoneId: 17bc0fda-9a9b-4a43-a71b-b3027a4753da
+    name: 'Phase 3: US1 Browse & View Photos'
+  'Phase 4: US2 Create Albums & Add Photos':
+    milestoneId: d26f62ae-57dc-4f24-ab81-99e2dba55537
+    name: 'Phase 4: US2 Create Albums & Add Photos'
+  'Phase 5: US3 Reorganize by Drag & Drop':
+    milestoneId: 4ea3b937-f88d-4db1-8d4f-2f47a8a164bf
+    name: 'Phase 5: US3 Reorganize by Drag & Drop'
+  'Phase 6: Polish & Cross-Cutting':
+    milestoneId: 1c10bdcb-fefa-4693-b4d1-ff8bfde898e9
+    name: 'Phase 6: Polish & Cross-Cutting'
+tasks:
+  T001:
+    issue: ALC-35
+    issueId: c10389a8-1d52-4f7b-a3d9-40e0e18af79b
+    url: https://linear.app/alchemica-devai/issue/ALC-35/initialize-nextjs-app-router-typescript-strict-project
+    file: docs/tasks/T001-initialize-next-js-app-router-typescript-strict-project.md
+  T002:
+    issue: ALC-36
+    issueId: 26c25462-98a1-49ca-b34f-61530cdb13c0
+    url: https://linear.app/alchemica-devai/issue/ALC-36/add-and-pin-runtime-dependencies
+    file: docs/tasks/T002-add-and-pin-runtime-dependencies.md
+  T003:
+    issue: ALC-37
+    issueId: 6b193cab-182f-4f57-9911-35fea87f89ff
+    url: https://linear.app/alchemica-devai/issue/ALC-37/configure-eslint-eslint-plugin-jsx-a11y-and-prettier
+    file: docs/tasks/T003-configure-eslint-eslint-plugin-jsx-a11y-and-prettier.md
+  T004:
+    issue: ALC-38
+    issueId: d9a3d08d-f7f0-45c2-a999-51532a644218
+    url: https://linear.app/alchemica-devai/issue/ALC-38/configure-vitest-react-testing-library-jest-axe-fake-indexeddb
+    file: docs/tasks/T004-configure-vitest-react-testing-library-jest-axe-fake-indexed.md
+  T005:
+    issue: ALC-39
+    issueId: 31096949-ea38-442c-bbf5-fd9efe421aea
+    url: https://linear.app/alchemica-devai/issue/ALC-39/define-domain-types-album-photo-photoblob-addoutcome-addresult
+    file: docs/tasks/T005-define-domain-types-album-photo-photoblob-addoutcome-addresu.md
+  T006:
+    issue: ALC-40
+    issueId: 4deff8fa-7a6e-4063-8172-75613874dcf9
+    url: https://linear.app/alchemica-devai/issue/ALC-40/implement-indexeddb-openupgrade-with-object-stores-albums-photos
+    file: docs/tasks/T006-implement-indexeddb-open-upgrade-with-object-stores-albums-p.md
+  T007:
+    issue: ALC-41
+    issueId: 69c86fa1-7ca1-4c12-9f98-1e33f5eb0ba4
+    url: https://linear.app/alchemica-devai/issue/ALC-41/unit-test-indexeddb-schema-stores-indexes-and-albumid-contenthash
+    file: docs/tasks/T007-unit-test-indexeddb-schema-stores-indexes-and-albumid-conten.md
+  T008:
+    issue: ALC-42
+    issueId: 3dbf7123-1fc4-4e00-8b84-baae488c5e0a
+    url: https://linear.app/alchemica-devai/issue/ALC-42/create-repository-scaffolding-typed-db-handle-accessor
+    file: docs/tasks/T008-create-repository-scaffolding-typed-db-handle-accessor-valid.md
+  T009:
+    issue: ALC-43
+    issueId: 62870bd7-680e-4c3f-b53c-a21e967759e9
+    url: https://linear.app/alchemica-devai/issue/ALC-43/implement-shared-dialog-primitive-focus-trap-esc-close-roledialog-aria
+    file: docs/tasks/T009-implement-shared-dialog-primitive-focus-trap-esc-close-role-.md
+  T010:
+    issue: ALC-44
+    issueId: e67b2976-8b54-451e-8c0e-71a58f63e029
+    url: https://linear.app/alchemica-devai/issue/ALC-44/unit-test-dialog-focus-trap-esc-close-focus-restore-jest-axe
+    file: docs/tasks/T010-unit-test-dialog-focus-trap-esc-close-focus-restore-jest-axe.md
+  T011:
+    issue: ALC-45
+    issueId: 7e1bd4ec-10b7-4298-b89a-c6927db0d515
+    url: https://linear.app/alchemica-devai/issue/ALC-45/implement-visuallyhidden
+    file: docs/tasks/T011-implement-visuallyhidden.md
+  T012:
+    issue: ALC-46
+    issueId: 131dc224-9e64-4a82-bad1-d56fe7eb7261
+    url: https://linear.app/alchemica-devai/issue/ALC-46/implement-emptystate-heading-helper-text-optional-action
+    file: docs/tasks/T012-implement-emptystate-heading-helper-text-optional-action.md
+  T013:
+    issue: ALC-47
+    issueId: f83f11a8-5145-46f1-9a0f-53fc72e0ac42
+    url: https://linear.app/alchemica-devai/issue/ALC-47/implement-root-layout-html-lang-skip-link-global-styles
+    file: docs/tasks/T013-implement-root-layout-html-lang-skip-link-global-styles.md
+  T014:
+    issue: ALC-48
+    issueId: f3531545-67de-4171-99ad-35a547aab177
+    url: https://linear.app/alchemica-devai/issue/ALC-48/implement-read-methods-listalbums-by-position-listphotos-by-order
+    file: docs/tasks/T014-implement-read-methods-listalbums-by-position-listphotos-by-.md
+  T015:
+    issue: ALC-49
+    issueId: 589f1fdb-a73a-4bd5-b397-aa3cd37d53d3
+    url: https://linear.app/alchemica-devai/issue/ALC-49/unit-test-repository-reads-albumphoto-ordering-thumbnail-full-object
+    file: docs/tasks/T015-unit-test-repository-reads-album-photo-ordering-thumbnail-fu.md
+  T016:
+    issue: ALC-50
+    issueId: 2d78e0d3-b101-4bc9-998d-ea0411e5eec0
+    url: https://linear.app/alchemica-devai/issue/ALC-50/implement-albumcard-title-derived-date-label-no-date-yet-focusable
+    file: docs/tasks/T016-implement-albumcard-title-derived-date-label-no-date-yet-foc.md
+  T017:
+    issue: ALC-51
+    issueId: 3f816a5f-8ba3-46b7-a36b-02614717e9df
+    url: https://linear.app/alchemica-devai/issue/ALC-51/unit-test-albumcard-renders-titledateplaceholder-keyboard-activation
+    file: docs/tasks/T017-unit-test-albumcard-renders-title-date-placeholder-keyboard-.md
+  T019:
+    issue: ALC-52
+    issueId: 5048ca19-09f9-42df-8348-44bbc0fe8510
+    url: https://linear.app/alchemica-devai/issue/ALC-52/unit-test-albumlist-ordered-render-empty-state
+    file: docs/tasks/T019-unit-test-albumlist-ordered-render-empty-state.md
+  T021:
+    issue: ALC-53
+    issueId: a2bfd6c9-231d-4cc4-953f-2b102e619c97
+    url: https://linear.app/alchemica-devai/issue/ALC-53/implement-phototile-thumbnail-img-with-intrinsic-widthheight-to-avoid
+    file: docs/tasks/T021-implement-phototile-thumbnail-img-with-intrinsic-width-heigh.md
+  T022:
+    issue: ALC-54
+    issueId: 2869b8aa-2a12-41e4-b89a-58d537e3a8c5
+    url: https://linear.app/alchemica-devai/issue/ALC-54/unit-test-phototile-renders-thumbnail-accessible-name-activation-jest
+    file: docs/tasks/T022-unit-test-phototile-renders-thumbnail-accessible-name-activa.md
+  T024:
+    issue: ALC-55
+    issueId: b9ece465-8735-4f69-b5a2-020e779fc164
+    url: https://linear.app/alchemica-devai/issue/ALC-55/unit-test-photogrid-renders-only-visible-subset-revokes-urls-on
+    file: docs/tasks/T024-unit-test-photogrid-renders-only-visible-subset-revokes-urls.md
+  T026:
+    issue: ALC-56
+    issueId: f08bb869-b1dc-4bd8-b681-9cd3022d9109
+    url: https://linear.app/alchemica-devai/issue/ALC-56/unit-test-photolightbox-openclose-focus-restore-jest-axe
+    file: docs/tasks/T026-unit-test-photolightbox-open-close-focus-restore-jest-axe.md
+  T028:
+    issue: ALC-57
+    issueId: 995b9268-8f9a-4f21-b7ce-f062c2e5e396
+    url: https://linear.app/alchemica-devai/issue/ALC-57/implement-supported-format-mime-guard
+    file: docs/tasks/T028-implement-supported-format-mime-guard.md
+  T029:
+    issue: ALC-58
+    issueId: 03af351b-13b7-4cf9-a3b4-17128781aa99
+    url: https://linear.app/alchemica-devai/issue/ALC-58/unit-test-validate-accepts-jpegpnggifwebp-rejects-others
+    file: docs/tasks/T029-unit-test-validate-accepts-jpeg-png-gif-webp-rejects-others.md
+  T030:
+    issue: ALC-59
+    issueId: 1e866753-38f1-4e2a-9ace-923db86c0289
+    url: https://linear.app/alchemica-devai/issue/ALC-59/implement-sha-256-content-hash-web-crypto-subtledigest
+    file: docs/tasks/T030-implement-sha-256-content-hash-web-crypto-subtle-digest.md
+  T031:
+    issue: ALC-60
+    issueId: f257890d-e224-483f-b8f6-5fe35b100385
+    url: https://linear.app/alchemica-devai/issue/ALC-60/unit-test-hash-stable-hash-identical-bytes-identical-hash-regardless
+    file: docs/tasks/T031-unit-test-hash-stable-hash-identical-bytes-identical-hash-re.md
+  T032:
+    issue: ALC-61
+    issueId: bede14f1-2a9a-4df8-8e4b-c4de595b4f4d
+    url: https://linear.app/alchemica-devai/issue/ALC-61/implement-exif-capture-date-extraction-with-added-date-fallback-exifr
+    file: docs/tasks/T032-implement-exif-capture-date-extraction-with-added-date-fallb.md
+  T033:
+    issue: ALC-62
+    issueId: 9f8ebf2a-a044-4939-a51f-3fcfb845ea82
+    url: https://linear.app/alchemica-devai/issue/ALC-62/unit-test-exif-reads-datetimeoriginal-falls-back-when-absent
+    file: docs/tasks/T033-unit-test-exif-reads-datetimeoriginal-falls-back-when-absent.md
+  T034:
+    issue: ALC-63
+    issueId: 95e5703e-d289-4cc2-86e2-579508f5ad1c
+    url: https://linear.app/alchemica-devai/issue/ALC-63/implement-canvas-thumbnail-generation-256px-longest-edge-intrinsic
+    file: docs/tasks/T034-implement-canvas-thumbnail-generation-256px-longest-edge-int.md
+  T035:
+    issue: ALC-64
+    issueId: 8d98435e-0a54-464e-aa27-9b3847f412ed
+    url: https://linear.app/alchemica-devai/issue/ALC-64/unit-test-thumbnail-downscales-reports-dimensions-surfaces-decode
+    file: docs/tasks/T035-unit-test-thumbnail-downscales-reports-dimensions-surfaces-d.md
+  T036:
+    issue: ALC-65
+    issueId: d32b4e87-4151-41a3-a78b-5783dc35285a
+    url: https://linear.app/alchemica-devai/issue/ALC-65/implement-createalbum-trimvalidate-title-append-position
+    file: docs/tasks/T036-implement-createalbum-trim-validate-title-append-position.md
+  T038:
+    issue: ALC-66
+    issueId: b330e3bc-0a00-4f37-90f3-3c63e4afbeb8
+    url: https://linear.app/alchemica-devai/issue/ALC-66/implement-removephoto-delete-photo-blob-recompute-datecount-and
+    file: docs/tasks/T038-implement-removephoto-delete-photo-blob-recompute-date-count.md
+  T039:
+    issue: ALC-67
+    issueId: fafbfb4b-9f1b-46ff-804b-505b3dd89fe2
+    url: https://linear.app/alchemica-devai/issue/ALC-67/unit-test-repository-writes-create-addphotos-addedrejected
+    file: docs/tasks/T039-unit-test-repository-writes-create-addphotos-added-rejected-.md
+  T040:
+    issue: ALC-68
+    issueId: d0ab9361-1f4a-4d05-82c4-679425ea77b9
+    url: https://linear.app/alchemica-devai/issue/ALC-68/implement-createalbumdialog-title-input-blocks-empty-title-on-dialog
+    file: docs/tasks/T040-implement-createalbumdialog-title-input-blocks-empty-title-o.md
+  T041:
+    issue: ALC-69
+    issueId: 3839c86a-e8c1-4b0a-a1da-a34d4104b441
+    url: https://linear.app/alchemica-devai/issue/ALC-69/unit-test-createalbumdialog-submit-empty-title-block-jest-axe
+    file: docs/tasks/T041-unit-test-createalbumdialog-submit-empty-title-block-jest-ax.md
+  T042:
+    issue: ALC-70
+    issueId: 94cbe7dc-f176-4038-b950-dec1606e1ae6
+    url: https://linear.app/alchemica-devai/issue/ALC-70/implement-addphotoscontrol-multi-file-input-per-file-outcome-messaging
+    file: docs/tasks/T042-implement-addphotoscontrol-multi-file-input-per-file-outcome.md
+  T043:
+    issue: ALC-71
+    issueId: 20ae72f4-300a-4f35-aecf-275f47ef552d
+    url: https://linear.app/alchemica-devai/issue/ALC-71/unit-test-addphotoscontrol-addedrejectedduplicate-feedback-non
+    file: docs/tasks/T043-unit-test-addphotoscontrol-added-rejected-duplicate-feedback.md
+  T044:
+    issue: ALC-72
+    issueId: 5268dcdb-e698-478d-a9f7-8e411f8b605c
+    url: https://linear.app/alchemica-devai/issue/ALC-72/implement-deletealbumdialog-confirmation-on-dialog
+    file: docs/tasks/T044-implement-deletealbumdialog-confirmation-on-dialog.md
+  T045:
+    issue: ALC-73
+    issueId: 49ee4bd5-e3b8-4a0a-be70-28638ff972aa
+    url: https://linear.app/alchemica-devai/issue/ALC-73/unit-test-deletealbumdialog-confirmcancel-jest-axe
+    file: docs/tasks/T045-unit-test-deletealbumdialog-confirm-cancel-jest-axe.md
+  T048:
+    issue: ALC-74
+    issueId: dc05d8c9-661e-4a67-8b0f-41781af4dc0d
+    url: https://linear.app/alchemica-devai/issue/ALC-74/implement-album-positionorder-helpers-reorder-gap-handling
+    file: docs/tasks/T048-implement-album-position-order-helpers-reorder-gap-handling.md
+  T049:
+    issue: ALC-75
+    issueId: 7556bde3-c346-48e4-af4b-5c4074bc3eb8
+    url: https://linear.app/alchemica-devai/issue/ALC-75/unit-test-ordering-helpers
+    file: docs/tasks/T049-unit-test-ordering-helpers.md
+  T051:
+    issue: ALC-76
+    issueId: 5fdfa3fd-001f-4948-9059-8324c132bc00
+    url: https://linear.app/alchemica-devai/issue/ALC-76/unit-test-reorderalbums-new-order-persisted-atomic-validation-error-on
+    file: docs/tasks/T051-unit-test-reorderalbums-new-order-persisted-atomic-validatio.md
+  T053:
+    issue: ALC-77
+    issueId: f38f9a93-0a80-4b3a-807a-908d0ece0516
+    url: https://linear.app/alchemica-devai/issue/ALC-77/extend-albumlistalbumcard-unit-tests-for-pointer-reorder-keyboard
+    file: docs/tasks/T053-extend-albumlist-albumcard-unit-tests-for-pointer-reorder-ke.md
+  T055:
+    issue: ALC-78
+    issueId: b108ee72-4427-468a-a960-27bb077889a5
+    url: https://linear.app/alchemica-devai/issue/ALC-78/add-ci-workflow-running-typecheck-lint-test-as-merge-gates
+    file: docs/tasks/T055-add-ci-workflow-running-typecheck-lint-test-as-merge-gates.md
+  T056:
+    issue: ALC-79
+    issueId: 7f687338-41bf-4308-b885-01362c4ad125
+    url: https://linear.app/alchemica-devai/issue/ALC-79/add-a-large-album-fixturedev-seed-and-verify-sc-005-first-screen-of
+    file: docs/tasks/T056-add-a-large-album-fixture-dev-seed-and-verify-sc-005-first-s.md
+  T057:
+    issue: ALC-80
+    issueId: 9f3b0b67-7c4a-4236-984d-9c3cb6d010d2
+    url: https://linear.app/alchemica-devai/issue/ALC-80/accessibility-audit-axe-across-main-page-default-mid-drag-and-album
+    file: docs/tasks/T057-accessibility-audit-axe-across-main-page-default-mid-drag-an.md
+  T058:
+    issue: ALC-81
+    issueId: 8216018d-853b-4a4c-9378-e31905fd8bb8
+    url: https://linear.app/alchemica-devai/issue/ALC-81/write-project-readmemd-with-setup-run-and-test-instructions
+    file: docs/tasks/T058-write-project-readme-md-with-setup-run-and-test-instructions.md
+  T059:
+    issue: ALC-82
+    issueId: 4bf032c9-27c8-4a1a-a897-7ef3c2cebb87
+    url: https://linear.app/alchemica-devai/issue/ALC-82/run-full-quickstartmd-validation-scenarios-a-d-and-check-off-the-done
+    file: docs/tasks/T059-run-full-quickstart-md-validation-scenarios-a-d-and-check-of.md
+  T018:
+    issue: ALC-83
+    issueId: f72275d7-575e-47cb-8044-5b5cc88ced3e
+    url: https://linear.app/alchemica-devai/issue/ALC-83/implement-albumlist-renders-ordered-albumcards-no-albums-emptystate
+    file: docs/tasks/T018-implement-albumlist-renders-ordered-albumcards-no-albums-emp.md
+  T023:
+    issue: ALC-84
+    issueId: 98124ef0-7e53-4039-82b8-026017263a4d
+    url: https://linear.app/alchemica-devai/issue/ALC-84/implement-photogrid-virtualized-via-tanstackreact-virtual
+    file: docs/tasks/T023-implement-photogrid-virtualized-via-tanstack-react-virtual-c.md
+  T025:
+    issue: ALC-85
+    issueId: d9fc99c4-2325-4b60-b7c2-414960fc2499
+    url: https://linear.app/alchemica-devai/issue/ALC-85/implement-photolightbox-modal-on-dialog-full-image-esc-closes-focus
+    file: docs/tasks/T025-implement-photolightbox-modal-on-dialog-full-image-esc-close.md
+  T037:
+    issue: ALC-86
+    issueId: fb6bb2a9-df15-4074-a64c-f86356392553
+    url: https://linear.app/alchemica-devai/issue/ALC-86/implement-addphotos-pipeline-validate-hash-per-album-dedup-exif-date
+    file: docs/tasks/T037-implement-addphotos-pipeline-validate-hash-per-album-dedup-e.md
+  T046:
+    issue: ALC-87
+    issueId: 83c929d2-de84-4bfe-9dea-fdc2f96c2804
+    url: https://linear.app/alchemica-devai/issue/ALC-87/wire-create-delete-album
+    file: docs/tasks/T046-wire-create-delete-album.md
+  T050:
+    issue: ALC-88
+    issueId: 5867699b-04df-490b-bc20-319f00381ff7
+    url: https://linear.app/alchemica-devai/issue/ALC-88/implement-reorderalbums-atomically-reassign-positions-validate-ids
+    file: docs/tasks/T050-implement-reorderalbums-atomically-reassign-positions-valida.md
+  T020:
+    issue: ALC-89
+    issueId: cc73ac90-1c72-4530-9c96-0ef150dbe536
+    url: https://linear.app/alchemica-devai/issue/ALC-89/implement-main-page-load-listalbums-render-albumlist-navigate-to-album
+    file: docs/tasks/T020-implement-main-page-load-listalbums-render-albumlist-navigat.md
+  T027:
+    issue: ALC-90
+    issueId: c8cfeb2b-e89e-44d1-a2c2-d4f16303b5cc
+    url: https://linear.app/alchemica-devai/issue/ALC-90/implement-album-detail-page-load-listphotos-render-photogrid-open
+    file: docs/tasks/T027-implement-album-detail-page-load-listphotos-render-photogrid.md
+  T047:
+    issue: ALC-91
+    issueId: ea0c8fdc-5a36-4bd6-a23a-f5bb8f200089
+    url: https://linear.app/alchemica-devai/issue/ALC-91/wire-add-remove-photos-and-date-label-refresh
+    file: docs/tasks/T047-wire-add-remove-photos-and-date-label-refresh.md
+  T052:
+    issue: ALC-92
+    issueId: de58d9a1-477d-4c76-9b0a-c4b2aaee860f
+    url: https://linear.app/alchemica-devai/issue/ALC-92/integrate-dnd-kit-sortablecontext-pointer-and-keyboard-sensors-drag
+    file: docs/tasks/T052-integrate-dnd-kit-sortablecontext-pointer-keyboard-sensors-d.md
+  T054:
+    issue: ALC-93
+    issueId: 2058ff4d-1d49-4664-bff8-eaa31643963e
+    url: https://linear.app/alchemica-devai/issue/ALC-93/wire-reorder-persistence-call-reorderalbums-on-drop-placement-feedback
+    file: docs/tasks/T054-wire-reorder-persistence-call-reorderalbums-on-drop-placemen.md
