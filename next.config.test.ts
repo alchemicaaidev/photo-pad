@@ -12,11 +12,15 @@ describe("T001: Next.js (App Router) + TypeScript strict project setup", () => {
     const pkg = readJson("package.json") as {
       dependencies: Record<string, string>;
       devDependencies: Record<string, string>;
+      engines: Record<string, string>;
     };
     expect(pkg.dependencies.next).toBeDefined();
     expect(pkg.dependencies.react).toBeDefined();
     expect(pkg.dependencies["react-dom"]).toBeDefined();
     expect(pkg.devDependencies.typescript).toBeDefined();
+    expect(pkg.engines.node).toBeDefined();
+    const nodeVersion = parseInt(pkg.engines.node.replace(">=", ""), 10);
+    expect(nodeVersion).toBeGreaterThanOrEqual(22);
   });
 
   it("has tsconfig.json with strict: true and noImplicitAny: true", () => {
