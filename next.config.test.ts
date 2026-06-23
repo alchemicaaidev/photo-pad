@@ -20,7 +20,7 @@ describe("T001: Next.js (App Router) + TypeScript strict project setup", () => {
     expect(pkg.devDependencies.typescript).toBeDefined();
     expect(pkg.engines.node).toBeDefined();
     const nodeVersion = parseInt(pkg.engines.node.replace(">=", ""), 10);
-    expect(nodeVersion).toBeGreaterThanOrEqual(22);
+    expect(nodeVersion).toBeGreaterThanOrEqual(24);
   });
 
   it("has tsconfig.json with strict: true and noImplicitAny: true", () => {
