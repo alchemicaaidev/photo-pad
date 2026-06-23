@@ -45,4 +45,21 @@ describe("T001: Next.js (App Router) + TypeScript strict project setup", () => {
     expect(content).toContain("padding: 0");
     expect(content).toContain("margin: 0");
   });
+
+  it("has app/layout.tsx for App Router activation", () => {
+    const content = fs.readFileSync(
+      path.join(process.cwd(), "app", "layout.tsx"),
+      "utf-8"
+    );
+    expect(content).toContain("export default function RootLayout");
+    expect(content).toContain('import "./globals.css"');
+  });
+
+  it("has app/page.tsx for App Router root page", () => {
+    const content = fs.readFileSync(
+      path.join(process.cwd(), "app", "page.tsx"),
+      "utf-8"
+    );
+    expect(content).toContain("export default function Home");
+  });
 });
