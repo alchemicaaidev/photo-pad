@@ -1,4 +1,9 @@
 .env
+node_modules/
+.DS_Store
+*.tsbuildinfo
+.next/
+
 .opensymphony*
 !.opensymphony/
 .opensymphony/*
