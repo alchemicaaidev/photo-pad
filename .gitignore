@@ -1,4 +1,9 @@
 .env
+.next/
+node_modules/
+tsconfig.tsbuildinfo
+
+# OpenSymphony
 .opensymphony*
 !.opensymphony/
 .opensymphony/*
