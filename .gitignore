@@ -1,7 +1,12 @@
 .env
+.env.local
 .opensymphony*
 !.opensymphony/
 .opensymphony/*
 !.opensymphony/memory/
 .opensymphony/memory/*
 !.opensymphony/memory/memory.yaml
+node_modules
+.next
+tsconfig.tsbuildinfo
+
