@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom/vitest';
 import 'fake-indexeddb/auto';
+
 import { toHaveNoViolations } from 'jest-axe';
 import { expect, afterEach } from 'vitest';
 import { cleanup } from '@testing-library/react';
