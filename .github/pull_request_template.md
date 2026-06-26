@@ -6,13 +6,13 @@
 
 <!-- List the key changes made -->
 
-- 
-- 
-- 
+-
+-
+-
 
 ## Evidence
 
-<!-- 
+<!--
 For substantive changes, include evidence showing the change works as intended:
 - Behavior changes: test output showing before/after
 - Performance changes: benchmarks or timing data

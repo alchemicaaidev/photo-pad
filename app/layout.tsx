@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Photo Pad",
-  description: "Photo Album Organizer",
+  title: 'Photo Pad',
+  description: 'Photo Album Organizer',
 };
 
 export default function RootLayout({
