@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
+<<<<<<< HEAD
     "target": "ES2017",
+=======
+>>>>>>> 36949ab (feat(testing): configure vitest + react testing library + jest-axe + fake-indexeddb)
     "lib": [
       "dom",
       "dom.iterable",
@@ -9,14 +12,21 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+<<<<<<< HEAD
     "noImplicitAny": true,
+=======
+>>>>>>> 36949ab (feat(testing): configure vitest + react testing library + jest-axe + fake-indexeddb)
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+<<<<<<< HEAD
     "jsx": "react-jsx",
+=======
+    "jsx": "preserve",
+>>>>>>> 36949ab (feat(testing): configure vitest + react testing library + jest-axe + fake-indexeddb)
     "incremental": true,
     "plugins": [
       {
@@ -27,14 +37,23 @@
       "@/*": [
         "./*"
       ]
+<<<<<<< HEAD
     }
+=======
+    },
+    "target": "ES2017"
+>>>>>>> 36949ab (feat(testing): configure vitest + react testing library + jest-axe + fake-indexeddb)
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+<<<<<<< HEAD
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
+=======
+    ".next/types/**/*.ts"
+>>>>>>> 36949ab (feat(testing): configure vitest + react testing library + jest-axe + fake-indexeddb)
   ],
   "exclude": [
     "node_modules"
