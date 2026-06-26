@@ -1,9 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { axe, toHaveNoViolations } from 'jest-axe';
+import { axe } from 'jest-axe';
 import Page from './page';
-
-expect.extend(toHaveNoViolations);
 
 describe('Home Page', () => {
   it('renders the heading', () => {
