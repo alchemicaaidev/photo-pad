@@ -103,6 +103,6 @@ jobs:
           llm-model: ${{ steps.llm.outputs.model }}
           llm-base-url: ${{ steps.llm.outputs.base_url }}
           extensions-version: 7782172ec796216cea2091e3f20c4d2a8a67da31
-          openhands-sdk-package: openhands-sdk==1.22.1
+          openhands-sdk-package: openhands-sdk
           review-style: ${{ steps.llm.outputs.style }}
           require-evidence: ${{ steps.llm.outputs.require_evidence }}
