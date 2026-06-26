@@ -1,8 +1,16 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
+<<<<<<< HEAD
 import { axe } from 'jest-axe';
 import Page from './page';
 
+=======
+import { axe, toHaveNoViolations } from 'jest-axe';
+import Page from './page';
+
+expect.extend(toHaveNoViolations);
+
+>>>>>>> 0582dd3 (feat: configure ESLint, Prettier, and testing setup (ALC-37))
 describe('Home Page', () => {
   it('renders the heading', () => {
     render(<Page />);
