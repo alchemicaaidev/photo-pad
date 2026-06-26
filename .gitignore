@@ -11,4 +11,3 @@ node_modules/
 .opensymphony/memory/*
 !.opensymphony/memory/memory.yaml
 tsconfig.tsbuildinfo
-

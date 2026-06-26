@@ -7,25 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-<<<<<<< HEAD
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-=======
->>>>>>> 36949ab (feat(testing): configure vitest + react testing library + jest-axe + fake-indexeddb)
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
-  },
-  "dependencies": {
-<<<<<<< HEAD
-    "@dnd-kit/core": "6.3.1",
-    "@dnd-kit/sortable": "10.0.0",
-    "@tanstack/react-virtual": "3.14.4",
-    "exifr": "7.1.3",
-    "idb": "8.0.3",
-    "next": "^16.2.9",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
   },
   "engines": {
     "node": ">=24.0.0"
@@ -52,29 +38,10 @@
     "vitest": "^4.1.9"
   },
   "overrides": {
-    "postcss": "8.5.15"
-=======
+    "postcss": "8.5.15",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^14.6.1",
-    "@types/jest-axe": "^3.5.9",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9.0.0",
-    "eslint-config-next": "^15.1.6",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "fake-indexeddb": "^5.0.2",
-    "jest-axe": "^9.0.0",
-    "jsdom": "^26.0.0",
-    "typescript": "^5",
-    "vitest": "^3.0.5"
->>>>>>> 36949ab (feat(testing): configure vitest + react testing library + jest-axe + fake-indexeddb)
+  }
   }
 }
