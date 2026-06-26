@@ -1,5 +1,6 @@
 {
   "extends": ["next", "next/core-web-vitals", "plugin:jsx-a11y/recommended"],
+<<<<<<< HEAD
   "plugins": ["jsx-a11y"],
 <<<<<<< HEAD
 
@@ -18,4 +19,7 @@
 
 =======
 >>>>>>> 6592058 (feat: configure ESLint, Prettier, and testing setup (ALC-37))
+=======
+  "plugins": ["jsx-a11y"]
+>>>>>>> 57cd2e0 (fix: align eslint-config-next with next version and simplify .eslintrc (ALC-37))
 }
