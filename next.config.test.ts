@@ -47,7 +47,7 @@ describe('T001: Next.js (App Router) + TypeScript strict project setup', () => {
   it('has app/layout.tsx for App Router activation', () => {
     const content = fs.readFileSync(path.join(process.cwd(), 'app', 'layout.tsx'), 'utf-8');
     expect(content).toContain('export default function RootLayout');
-    expect(content).toContain('import "./globals.css"');
+    expect(content).toMatch(/import\s+['"]\.\/globals\.css['"]/);
   });
 
   it('has app/page.tsx for App Router root page', () => {
