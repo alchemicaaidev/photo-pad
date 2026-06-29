@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Photo Album Organizer",
-  description: "Organize your photos into albums",
+  title: "Photo Pad",
+  description: "Photo Album Organizer",
 };
 
 export default function RootLayout({
