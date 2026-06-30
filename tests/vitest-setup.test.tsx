@@ -1,8 +1,9 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import { render, screen, cleanup } from '@testing-library/react';
-import { axe } from 'jest-axe';
+import { axe, toHaveNoViolations } from 'jest-axe';
 import React from 'react';
 
+expect.extend(toHaveNoViolations);
 // A minimal component for jest-axe testing
 function AccessibleButton({ label }: { label: string }) {
   return <button type="button">{label}</button>;
