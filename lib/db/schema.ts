@@ -19,6 +19,8 @@ export function openSchemaDb(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
     const request = indexedDB.open("photos-pad", 1);
     request.onerror = () => reject(request.error);
+    request.onblocked = () =>
+      reject(new Error("Database open blocked: close older connections first"));
     request.onsuccess = () => resolve(request.result);
     request.onupgradeneeded = (event) => {
       const db = (event.target as IDBOpenDBRequest).result;
@@ -48,6 +50,7 @@ export function deleteSchemaDb(): Promise<void> {
     const request = indexedDB.deleteDatabase("photos-pad");
     request.onerror = () => reject(request.error);
     request.onsuccess = () => resolve();
-    request.onblocked = () => resolve(); // DB may be in use, but we proceed
+    request.onblocked = () =>
+      reject(new Error("Database delete blocked: close all connections first"));
   });
 }
