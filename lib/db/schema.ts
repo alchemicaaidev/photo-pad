@@ -25,22 +25,26 @@ export function openSchemaDb(): Promise<IDBDatabase> {
     request.onupgradeneeded = (event) => {
       const db = (event.target as IDBOpenDBRequest).result;
 
-      // Albums store
-      const albumStore = db.createObjectStore("albums", { keyPath: "id" });
-      albumStore.createIndex("by-position", "position", { unique: false });
+      // Only create stores if they don't already exist (migration-safe)
+      if (!db.objectStoreNames.contains("albums")) {
+        const albumStore = db.createObjectStore("albums", { keyPath: "id" });
+        albumStore.createIndex("by-position", "position", { unique: false });
+      }
 
-      // Photos store
-      const photoStore = db.createObjectStore("photos", { keyPath: "id" });
-      photoStore.createIndex("by-album", "albumId", { unique: false });
-      photoStore.createIndex("by-album-order", ["albumId", "order"], {
-        unique: false,
-      });
-      photoStore.createIndex("by-album-hash", ["albumId", "contentHash"], {
-        unique: true,
-      });
+      if (!db.objectStoreNames.contains("photos")) {
+        const photoStore = db.createObjectStore("photos", { keyPath: "id" });
+        photoStore.createIndex("by-album", "albumId", { unique: false });
+        photoStore.createIndex("by-album-order", ["albumId", "order"], {
+          unique: false,
+        });
+        photoStore.createIndex("by-album-hash", ["albumId", "contentHash"], {
+          unique: true,
+        });
+      }
 
-      // PhotoBlobs store
-      db.createObjectStore("photoBlobs", { keyPath: "photoId" });
+      if (!db.objectStoreNames.contains("photoBlobs")) {
+        db.createObjectStore("photoBlobs", { keyPath: "photoId" });
+      }
     };
   });
 }
