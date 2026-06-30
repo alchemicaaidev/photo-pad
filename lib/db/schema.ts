@@ -25,23 +25,36 @@ export function openSchemaDb(): Promise<IDBDatabase> {
     request.onupgradeneeded = (event) => {
       const db = (event.target as IDBOpenDBRequest).result;
 
-      // Only create stores if they don't already exist (migration-safe)
+      // Albums store — guard object-store creation and each index individually
+      // so future version bumps can add new indexes safely.
       if (!db.objectStoreNames.contains("albums")) {
-        const albumStore = db.createObjectStore("albums", { keyPath: "id" });
+        db.createObjectStore("albums", { keyPath: "id" });
+      }
+      const albumStore = (event.target as IDBOpenDBRequest).transaction!.objectStore("albums");
+      if (!albumStore.indexNames.contains("by-position")) {
         albumStore.createIndex("by-position", "position", { unique: false });
       }
 
+      // Photos store — same pattern: guard store + each index.
       if (!db.objectStoreNames.contains("photos")) {
-        const photoStore = db.createObjectStore("photos", { keyPath: "id" });
+        db.createObjectStore("photos", { keyPath: "id" });
+      }
+      const photoStore = (event.target as IDBOpenDBRequest).transaction!.objectStore("photos");
+      if (!photoStore.indexNames.contains("by-album")) {
         photoStore.createIndex("by-album", "albumId", { unique: false });
+      }
+      if (!photoStore.indexNames.contains("by-album-order")) {
         photoStore.createIndex("by-album-order", ["albumId", "order"], {
           unique: false,
         });
+      }
+      if (!photoStore.indexNames.contains("by-album-hash")) {
         photoStore.createIndex("by-album-hash", ["albumId", "contentHash"], {
           unique: true,
         });
       }
 
+      // PhotoBlobs store
       if (!db.objectStoreNames.contains("photoBlobs")) {
         db.createObjectStore("photoBlobs", { keyPath: "photoId" });
       }

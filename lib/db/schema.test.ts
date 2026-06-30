@@ -1,6 +1,44 @@
 import { describe, expect, it, beforeEach, afterEach } from 'vitest';
 import { openSchemaDb, deleteSchemaDb } from './schema';
 
+/**
+ * Adds a single record to an IndexedDB object store and resolves/rejects
+ * with a standard Promise so tests can use `await`.
+ */
+function addRecord<T>(
+  store: IDBObjectStore,
+  record: T
+): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const request = store.add(record);
+    request.onsuccess = () => resolve();
+    request.onerror = () => reject(request.error);
+  });
+}
+
+/**
+ * Adds two records sequentially, expecting the second add to fail with a
+ * ConstraintError. Resolves when the expected error is observed.
+ */
+function addExpectingConstraintError<T>(
+  store: IDBObjectStore,
+  first: T,
+  second: T
+): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const req1 = store.add(first);
+    req1.onsuccess = () => {
+      const req2 = store.add(second);
+      req2.onsuccess = () => reject(new Error('Expected duplicate add to fail'));
+      req2.onerror = () => {
+        expect(req2.error?.name).toBe('ConstraintError');
+        resolve();
+      };
+    };
+    req1.onerror = () => reject(req1.error);
+  });
+}
+
 describe('IndexedDB schema (T007)', () => {
   let db: IDBDatabase;
 
@@ -73,34 +111,18 @@ describe('IndexedDB schema (T007)', () => {
     const transaction = db.transaction('photos', 'readwrite');
     const store = transaction.objectStore('photos');
 
-    const photo1 = {
+    await addExpectingConstraintError(store, {
       id: 'photo-1',
       albumId: 'album-1',
       contentHash: 'hash-a',
       fileName: 'a.jpg',
       order: 0,
-    };
-
-    const photo2 = {
+    }, {
       id: 'photo-2',
       albumId: 'album-1',
-      contentHash: 'hash-a', // same albumId + contentHash as photo1
+      contentHash: 'hash-a',
       fileName: 'b.jpg',
       order: 1,
-    };
-
-    await new Promise<void>((resolve, reject) => {
-      const add1 = store.add(photo1);
-      add1.onsuccess = () => {
-        const add2 = store.add(photo2);
-        add2.onsuccess = () => reject(new Error('Expected duplicate add to fail'));
-        add2.onerror = () => {
-          // Expected: constraint violation
-          expect(add2.error?.name).toBe('ConstraintError');
-          resolve();
-        };
-      };
-      add1.onerror = () => reject(add1.error);
     });
   });
 
@@ -108,30 +130,19 @@ describe('IndexedDB schema (T007)', () => {
     const transaction = db.transaction('photos', 'readwrite');
     const store = transaction.objectStore('photos');
 
-    const photo1 = {
+    await addRecord(store, {
       id: 'photo-3',
       albumId: 'album-1',
       contentHash: 'hash-shared',
       fileName: 'a.jpg',
       order: 0,
-    };
-
-    const photo2 = {
+    });
+    await addRecord(store, {
       id: 'photo-4',
       albumId: 'album-2',
-      contentHash: 'hash-shared', // same hash, different album
+      contentHash: 'hash-shared',
       fileName: 'b.jpg',
       order: 0,
-    };
-
-    await new Promise<void>((resolve, reject) => {
-      const add1 = store.add(photo1);
-      add1.onsuccess = () => {
-        const add2 = store.add(photo2);
-        add2.onsuccess = () => resolve();
-        add2.onerror = () => reject(add2.error);
-      };
-      add1.onerror = () => reject(add1.error);
     });
   });
 
@@ -139,30 +150,19 @@ describe('IndexedDB schema (T007)', () => {
     const transaction = db.transaction('photos', 'readwrite');
     const store = transaction.objectStore('photos');
 
-    const photo1 = {
+    await addRecord(store, {
       id: 'photo-5',
       albumId: 'album-3',
       contentHash: 'hash-x',
       fileName: 'x.jpg',
       order: 0,
-    };
-
-    const photo2 = {
+    });
+    await addRecord(store, {
       id: 'photo-6',
       albumId: 'album-3',
-      contentHash: 'hash-y', // different hash, same album
+      contentHash: 'hash-y',
       fileName: 'y.jpg',
       order: 1,
-    };
-
-    await new Promise<void>((resolve, reject) => {
-      const add1 = store.add(photo1);
-      add1.onsuccess = () => {
-        const add2 = store.add(photo2);
-        add2.onsuccess = () => resolve();
-        add2.onerror = () => reject(add2.error);
-      };
-      add1.onerror = () => reject(add1.error);
     });
   });
 });
