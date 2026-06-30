@@ -2,7 +2,6 @@ node_modules
 .next
 dist
 coverage
-<<<<<<< HEAD
 .agents
 .claude
 .opensymphony
@@ -15,5 +14,3 @@ AGENTS.md
 CLAUDE.md
 prompts.txt
 config.yaml
-=======
->>>>>>> 0582dd3 (feat: configure ESLint, Prettier, and testing setup (ALC-37))
