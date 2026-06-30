@@ -69,6 +69,7 @@ export type AddResult = {
 export class ValidationError extends Error {
   constructor(message: string) {
     super(message);
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'ValidationError';
   }
 }
@@ -79,6 +80,7 @@ export class ValidationError extends Error {
 export class StorageError extends Error {
   constructor(message: string) {
     super(message);
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'StorageError';
   }
 }

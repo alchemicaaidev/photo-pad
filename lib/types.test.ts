@@ -170,7 +170,7 @@ describe('domain types', () => {
   });
 
   describe('ValidationError', () => {
-    it('is an instance of Error', () => {
+    it('is an instance of Error and ValidationError', () => {
       const error = new ValidationError('title is required');
       expect(error).toBeInstanceOf(Error);
       expect(error).toBeInstanceOf(ValidationError);
@@ -181,10 +181,34 @@ describe('domain types', () => {
       expect(error.name).toBe('ValidationError');
       expect(error.message).toBe('invalid id');
     });
+
+    it('can be thrown and caught by instanceof', () => {
+      expect(() => {
+        throw new ValidationError('bad input');
+      }).toThrow(ValidationError);
+
+      try {
+        throw new ValidationError('validation failed');
+      } catch (err) {
+        expect(err).toBeInstanceOf(ValidationError);
+        expect(err).toBeInstanceOf(Error);
+        expect((err as ValidationError).message).toBe('validation failed');
+      }
+    });
+
+    it('propagates through a typed catch boundary', () => {
+      function mightThrow(shouldThrow: boolean): string {
+        if (shouldThrow) throw new ValidationError('required');
+        return 'ok';
+      }
+
+      expect(() => mightThrow(true)).toThrow(ValidationError);
+      expect(mightThrow(false)).toBe('ok');
+    });
   });
 
   describe('StorageError', () => {
-    it('is an instance of Error', () => {
+    it('is an instance of Error and StorageError', () => {
       const error = new StorageError('quota exceeded');
       expect(error).toBeInstanceOf(Error);
       expect(error).toBeInstanceOf(StorageError);
@@ -194,6 +218,68 @@ describe('domain types', () => {
       const error = new StorageError('indexeddb unavailable');
       expect(error.name).toBe('StorageError');
       expect(error.message).toBe('indexeddb unavailable');
+    });
+
+    it('can be thrown and caught by instanceof', () => {
+      expect(() => {
+        throw new StorageError('disk full');
+      }).toThrow(StorageError);
+
+      try {
+        throw new StorageError('out of space');
+      } catch (err) {
+        expect(err).toBeInstanceOf(StorageError);
+        expect(err).toBeInstanceOf(Error);
+        expect((err as StorageError).message).toBe('out of space');
+      }
+    });
+
+    it('propagates through a typed catch boundary', () => {
+      function mightThrow(shouldThrow: boolean): string {
+        if (shouldThrow) throw new StorageError('quota');
+        return 'ok';
+      }
+
+      expect(() => mightThrow(true)).toThrow(StorageError);
+      expect(mightThrow(false)).toBe('ok');
+    });
+  });
+
+  describe('AddOutcome exhaustiveness', () => {
+    it('discriminates every variant via switch', () => {
+      const outcomes: AddOutcome[] = [
+        { file: 'a.jpg', status: 'added', photoId: 'p-1' },
+        { file: 'b.pdf', status: 'rejected-format' },
+        { file: 'c.jpg', status: 'rejected-corrupt' },
+        { file: 'd.jpg', status: 'duplicate' },
+      ];
+
+      const counts = { added: 0, rejectedFormat: 0, rejectedCorrupt: 0, duplicate: 0 };
+
+      for (const o of outcomes) {
+        switch (o.status) {
+          case 'added':
+            counts.added++;
+            expect(o.photoId).toBe('p-1');
+            break;
+          case 'rejected-format':
+            counts.rejectedFormat++;
+            break;
+          case 'rejected-corrupt':
+            counts.rejectedCorrupt++;
+            break;
+          case 'duplicate':
+            counts.duplicate++;
+            break;
+          default: {
+            // compile-time exhaustiveness check
+            const _exhaustive: never = o;
+            throw new Error('unreachable: ' + _exhaustive);
+          }
+        }
+      }
+
+      expect(counts).toEqual({ added: 1, rejectedFormat: 1, rejectedCorrupt: 1, duplicate: 1 });
     });
   });
 });
