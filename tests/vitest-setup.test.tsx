@@ -11,6 +11,7 @@ function AccessibleButton({ label }: { label: string }) {
 
 // A minimal component for jest-axe testing (with an actual violation to detect)
 function InaccessibleImage({ src }: { src: string }) {
+  // eslint-disable-next-line jsx-a11y/alt-text
   return <img src={src} />;
 }
 
