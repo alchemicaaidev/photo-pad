@@ -1,45 +1,5 @@
 import { describe, expect, it, beforeEach, afterEach } from 'vitest';
-
-/**
- * Opens the IndexedDB with the Photo Album Organizer schema.
- * This mirrors the expected schema.ts contract (T006).
- */
-function openSchemaDb(): Promise<IDBDatabase> {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.open('photos-pad', 1);
-    request.onerror = () => reject(request.error);
-    request.onsuccess = () => resolve(request.result);
-    request.onupgradeneeded = (event) => {
-      const db = (event.target as IDBOpenDBRequest).result;
-
-      // Albums store
-      const albumStore = db.createObjectStore('albums', { keyPath: 'id' });
-      albumStore.createIndex('by-position', 'position', { unique: false });
-
-      // Photos store
-      const photoStore = db.createObjectStore('photos', { keyPath: 'id' });
-      photoStore.createIndex('by-album', 'albumId', { unique: false });
-      photoStore.createIndex('by-album-order', ['albumId', 'order'], {
-        unique: false,
-      });
-      photoStore.createIndex('by-album-hash', ['albumId', 'contentHash'], {
-        unique: true,
-      });
-
-      // PhotoBlobs store
-      db.createObjectStore('photoBlobs', { keyPath: 'photoId' });
-    };
-  });
-}
-
-async function deleteSchemaDb(): Promise<void> {
-  return new Promise((resolve, reject) => {
-    const request = indexedDB.deleteDatabase('photos-pad');
-    request.onerror = () => reject(request.error);
-    request.onsuccess = () => resolve();
-    request.onblocked = () => resolve(); // DB may be in use, but we proceed
-  });
-}
+import { openSchemaDb, deleteSchemaDb } from './schema';
 
 describe('IndexedDB schema (T007)', () => {
   let db: IDBDatabase;
@@ -49,7 +9,7 @@ describe('IndexedDB schema (T007)', () => {
     db = await openSchemaDb();
   });
 
-  afterEach(() => {
+  afterEach(async () => {
     db.close();
   });
 
